@@ -62,5 +62,23 @@
  :template "default-org"
  :prompt "输入书名: ")
 
+(org-topic-register
+ :prefix "talent"
+ :root-dir (expand-file-name "talent" org-roam-topic-dir)
+ :org-roam-type t
+ :title-enabled t
+ :title-prefix "talent"
+ :template "default-org"
+ :prompt "输入名人（记录名言）: ")
+
+(org-topic-register
+ :prefix "event"
+ :root-dir (expand-file-name "event" org-roam-topic-dir)
+ :org-roam-type t
+ :title-enabled t
+ :title-prefix "event"
+ :template "default-org"
+ :prompt "输入事件名: ")
+
 
 (require 'init-blog)
