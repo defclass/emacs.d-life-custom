@@ -80,5 +80,36 @@
  :template "default-org"
  :prompt "输入事件名: ")
 
+;;;; 对认识的人进行评价
+
+(org-topic-register
+ :prefix "person"
+ :root-dir (expand-file-name "person" org-roam-topic-dir)
+ :org-roam-type t
+ :title-enabled t
+ :title-prefix "person"
+ :template "default-person"
+ :prompt "输入人名: ")
+
+(org-topic-register
+ :prefix "online-users"
+ :root-dir (expand-file-name "online-users" org-roam-topic-dir)
+ :org-roam-type t
+ :title-enabled t
+ :title-prefix "online-users"
+ :template "default-person"
+ :prompt "输入人名或ID: ")
+
+;;;; GPS
+
+(org-topic-register
+ :prefix "n2-gps"
+ :root-dir (expand-file-name "gps/n2" org-roam-topic-dir)
+ :org-roam-type nil
+ :date t
+ :title-enabled nil
+ :title-prefix "GPS-N2"
+ :template "default-gps")
+
 
 (require 'init-blog)
