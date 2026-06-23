@@ -13,15 +13,6 @@
          :org-roam-type t
          :prompt "输入探索主题: ")
 
-        (:prefix "journal"
-         :root-dir "journal"
-         :date t
-         :title-enabled nil
-         :org-roam-type t
-         :title-prefix "Journal"
-         :template "default-life-daily"
-         :prompt "选择或输入日期: ")
-
         (:prefix "project"
          :root-dir "project"
          :date t
