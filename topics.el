@@ -36,6 +36,15 @@
          (:template . "default-org")
          (:prompt . "输入书名: "))
 
+        ;; Emacs
+        ((:prefix . "emacs")
+         (:root-dir . "Emacs")
+         (:org-roam-type . t)
+         (:title-enabled . t)
+         (:title-prefix . "Emacs")
+         (:template . "default-org")
+         (:prompt . "输入 Emacs 主题名: "))
+
         ;;;; --------- Review ----------------
         ;; person in real life
         ((:prefix . "person")
