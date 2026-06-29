@@ -70,7 +70,8 @@
          :title-enabled t
          :title-prefix "person"
          :template "default-person"
-         :prompt "输入人名: ")
+         :prompt "输入人名: "
+	 :encrypted t)
 
         (:prefix "online-users"
          :root-dir "online-users"
