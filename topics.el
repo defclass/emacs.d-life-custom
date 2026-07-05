@@ -2,7 +2,7 @@
 
 (setq my/profile-topic-definitions
       '(
-        ;; ------------- Myself -----------------
+        ;;;; ----------- Myself -----------------
         ;; 折腾的工具
         ((:prefix . "tools")
          (:root-dir . "technology/tools")
@@ -45,6 +45,14 @@
          (:template . "default-org")
          (:prompt . "输入 Emacs 主题名: "))
 
+        ;; Some page 
+        ((:prefix . "page")
+         (:root-dir . "page")
+         (:date . nil)
+         (:org-roam-type . t)
+         (:template . "default-org")
+         (:prompt . "选择或输入Page主题: "))
+
         ;;;; --------- Review ----------------
         ;; person in real life
         ((:prefix . "person")
@@ -83,6 +91,16 @@
          (:template . "default-person")
          (:prompt . "输入人名或ID: "))
 
+        ;; workmate
+        ((:prefix . "workmate")
+         (:root-dir . "workmate")
+         (:template . "default-workmate")
+         (:date . nil)
+         (:org-roam-type . t)
+         (:title-prefix . "workmate")
+         (:prompt . "选择或输入同事姓名: ")
+         (:encrypted . t))
+
         ;; 自媒体评论
         ((:prefix . "media-review")
          (:root-dir . "media-review")
@@ -92,8 +110,64 @@
          (:template . "default-org")
          (:prompt . "输入媒体名: "))
 
-        ;; Deprecated.
-        ;; --------------------------------------
+        ;;;; -------- Work ----------
+        ((:prefix . "shared")
+         (:root-dir . "shared")
+         (:date . nil)
+         (:org-roam-type . t)
+         (:title-enabled . t)
+         (:template . "default-org")
+         (:prompt . "选择或输入 shared 主题: "))
+
+        ;; Work Team
+
+        ((:prefix . "1on1")
+         (:root-dir . "1on1")
+         (:template . "default-1on1")
+         (:date . t)
+         (:org-roam-type . t)
+         (:title-enabled . t)
+         (:title-prefix . "1on1")
+         (:prompt . "选择或输入1on1主题: "))
+        
+
+        ((:prefix . "appraisal")
+         (:root-dir . "appraisal")
+         (:template . "default-appraisal")
+         (:date . nil)
+         (:org-roam-type . t)
+         (:title-prefix . (format "%s年度评价" (format-time-string "%Y")))
+         (:prompt . "选择或输入年度评价的同事姓名: "))
+
+        ;;;; ---------- Deprecated -----------------        
+        ;; Backlogs 
+
+        ((:prefix . "kintai")
+         (:org-roam-type . t)
+         (:root-dir . "backlog/KINTAI")
+         (:template . "default-backlog")
+         (:prompt . "输入票号: "))
+
+        ((:prefix . "core")
+         (:org-roam-type . t)
+         (:root-dir . "backlog/ONEHR_CORE")
+         (:template . "default-backlog")
+         (:prompt . "输入票号: "))
+
+        ((:prefix . "qa")
+         (:org-roam-type . t)
+         (:root-dir . "backlog/KINTAI_QA")
+         (:template . "default-backlog")
+         (:prompt . "输入票号: "))
+
+        ((:prefix . "devops")
+         (:org-roam-type . t)
+         (:root-dir . "backlog/SC_DEVOPS")
+         (:template . "default-backlog")
+         (:prompt . "输入票号: "))
+
+        ;;;; ---------- Deprecated -----------------
+
         ((:prefix . "n2-gps")
          (:root-dir . "gps/n2")
          (:org-roam-type . nil)
