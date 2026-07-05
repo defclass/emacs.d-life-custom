@@ -4,7 +4,9 @@
  :org-note-dir "~/note/org-note"
  :org-attach-dir-aliases
  '(("nas-attach" . "/Volumes/main-data/org-big-attachments/files"))
- :org-video-player-executable
+ :org-video-mpv-executable
+ "/Applications/mpv.app/Contents/MacOS/mpv"
+ :org-video-vlc-executable
  "/Applications/VLC.app/Contents/MacOS/VLC")
 
 ;;; macos.el ends here

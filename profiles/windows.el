@@ -3,7 +3,7 @@
 (my/profile-merge-data
  :org-note-dir "~/note/org-note"
  :org-attach-dir-aliases nil
- :org-video-player-executable
+ :org-video-vlc-executable
  "C:/Program Files/VideoLAN/VLC/vlc.exe")
 
 ;; Put the Windows NAS root and any machine-specific drive paths in the ignored
