@@ -1,13 +1,18 @@
 ;;; profile.el --- Private life profile  -*- lexical-binding: t; -*-
 
 (setq my/profile-name 'life)
+(setq my/profile-data nil)
 
-(setq my/profile-data
-      '(:org-note-dir "~/note/org-note"
-        :gpg-recipient "398878DEB89103E1AAF33653DF36ED6081BD3962"
-	 :org-attach-dir-aliases
-         (("nas-attach" . "/Volumes/main-data/org-big-attachments/files"))
-        :features (blog)))
+(let* ((directory (file-name-directory load-file-name))
+       (profiles-directory (expand-file-name "profiles" directory))
+       (platform-file
+        (pcase system-type
+          ('darwin "macos.el")
+          ('windows-nt "windows.el")
+          (_ nil))))
+  (load (expand-file-name "common.el" profiles-directory) nil t)
+  (when platform-file
+    (load (expand-file-name platform-file profiles-directory) nil t)))
 
 (load (expand-file-name "topics.el" (file-name-directory load-file-name)) nil t)
 
