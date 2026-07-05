@@ -3,6 +3,8 @@
 (my/profile-merge-data
  :org-note-dir "~/note/org-note"
  :org-attach-dir-aliases nil
+ :org-video-mpv-executable
+ "C:/Users/defcl/scoop/apps/mpv/current/mpv.exe"
  :org-video-vlc-executable
  "C:/Program Files/VideoLAN/VLC/vlc.exe")
 
